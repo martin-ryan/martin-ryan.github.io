@@ -6,15 +6,20 @@
 // unit tile tracks its position and can't move into blocked tile
 // unit tile tracks its position and can't move into other unit tile
 
-
-
 $('document').ready(function(){
 
   initBoard();
-  // setTile();
+
 })
 
-// VARS - hypotenus distance is 29.963px (isometric) which is 53.656px y and 13.4px x
+//
+// NAMESPACES
+// var ui = {};
+// var tile = {};
+// var board = {};
+//
+// VARS
+// notes: hypotenus distance is 29.963px (isometric) which is 53.656px y and 13.4px x
 var moveDist_x = 53.656;
 var moveDist_y = 26.837;
 var initOffset = moveDist_y / 2;
@@ -25,33 +30,46 @@ var tileWidth;
 var tileHeight;
 var boardWidth = 1153.6;
 var boardHeight = 577;
+// squads and units
+var squad1_unit1 = {};
+var squad1_unit2 = {};
+var squad1_unit3 = {};
+var squad1_unit4 = {};
+//
+var squad2_unit1 = {};
+var squad2_unit2 = {};
+var squad2_unit3 = {};
+var squad2_unit4 = {};
+//
+
+
 
 // OBJS -
-
-$(tile_0-1).click(function(){
-
-})
-$(tile_0-2).click(function(){
-
-})
 
 // COMPONENT
 
 // CLASSES - Tile Constructor
-function tile_unit(){
+function tile_unit(name, src){
   //
   // VARS
   self = this;
+  this.name =
+  this.src = src;
+  this.container = null;
+  this.tag = null;
   //
   // METHODS
-  this.initialize(row, col){
-    
-    tag.prop('id', id);
-    tag.prop('src', src);
-    board.append(tag);
+  this.initialize = function(row, col){
+    self.container = $('div');
+    self.tag = $('<img>');
+    self.tag.prop('id', self.name);
+    self.tag.prop('src', self.src);
+    self.container.append(self.tag);
+    board.append(self.container);
+    self.moveTo(row, col);
   }
   //
-  this.moveTo = function(){
+  this.moveTo = function(row, col){
     var newRow = tileWidth * row;
     var newCol = tileHeight * col + initOffset;
     //
@@ -61,7 +79,35 @@ function tile_unit(){
   }
 }
 
+// GAME CONTROLLER
+function gameController(state){
+  //
+  var gameState = state;
+  //
+  switch (gameState) {
+    case 'board is ready':
+    //
+    displayInstructions();
+      break;
+    case 'instructions have been read':
+    //
+      break;
+    case 'first player has deployed':
+    //
+      break;
+    case 'second player has deployed':
+    //
+      break;
+    case 'game is ready to play':
+    //
+      break;
+    //
+    default:
+      gameController();
+  }
+}
 
+// FUNCTIONS
 function initBoard(){
   body = $('body');
   board = $('<div>');
@@ -82,9 +128,38 @@ function initBoard(){
   board.css('background-image', 'url(' + boardBkgdSrc + ')');
   body.append(board);
 
-  // test single tile object
+  // Display Player Select
+  // playerReady = $('<div>');
+  // playerReady.css('id','playerRead');
+  // playerReady.css('float','left');
+  // playerReady.css('margin-left','auto');
+  // playerReady.css('margin-right','auto');
+  // playerReady.css('display','inline-block');
+  // playerReady.css('position','absolute');
+  // playerReady.css('width','200px');
+  // playerReady.css('height','200px');
+  // playerReady.css('background-color','skyblue');
+//  board.append(playerReady);
 
-  var testTile1 = new tile(4, 4, $('<img>'), 'tile_4-4', 'img/tileBlue.png');
+  gameController('board is ready');
+
+}
+
+
+function displayInstructions(){
+
+}
+
+
+
+function startGame(){
+  squad1_unit1 = new tile_unit('Bubba Jones', 'img/tileBlue.png');
+  squad1_unit1.initialize(8,5);
+
+  squad1_unit2 = new tile_unit('Bubba Jones', 'img/tileBlue.png');
+  squad1_unit2.initialize(2,2);
+
+  gameController
 
 }
 

@@ -1,7 +1,55 @@
-#board {
-  display: block;
-  width: 1153.6px;
-  height: 577px;
-  background-color: lightgrey; }
+/*
+Error: Invalid CSS after "block": expected expression (e.g. 1px, bold), was ";"
+        on line 2 of style/style.css
 
-/*# sourceMappingURL=style.css.map */
+1: #board {
+2:   display: block;
+3:   width: 1153.6px;
+4:   height: 577px;
+5:   background-color: lightgrey; }
+6: 
+7: /*# sourceMappingURL=style.css.map *\/
+
+Backtrace:
+style/style.css:2
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/lexer.rb:221:in `expected!'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/parser.rb:600:in `assert_done'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/parser.rb:63:in `parse'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/parser.rb:183:in `parse'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script.rb:27:in `parse'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:1130:in `parse_script'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:720:in `parse_property'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:691:in `parse_property_or_rule'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:657:in `parse_line'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:535:in `build_tree'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:554:in `block in append_children'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:553:in `each'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:553:in `append_children'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:544:in `block in build_tree'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:537:in `each'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:537:in `build_tree'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:554:in `block in append_children'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:553:in `each'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:553:in `append_children'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:406:in `_to_tree'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/plugin.rb:108:in `method_missing'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/Users/martin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+/Users/martin/.rbenv/versions/2.2.3/bin/sass:23:in `load'
+/Users/martin/.rbenv/versions/2.2.3/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"block\": expected expression (e.g. 1px, bold), was \";\"\A         on line 2 of style/style.css\A \A 1: #board {\A 2:   display: block;\A 3:   width: 1153.6px;\A 4:   height: 577px;\A 5:   background-color: lightgrey; }\A 6: \A 7: /*# sourceMappingURL=style.css.map */"; }
