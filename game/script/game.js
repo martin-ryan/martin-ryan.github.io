@@ -40,34 +40,7 @@ function initBoard(){
 
 }
 
-function initPlayerSelect(){
-  //
-  var p1_ready = false;
-  var p2_ready = false;
-  ui.overlay.playerSelect = $('#overlay_playerSelect');
-  ui.overlay.playerSelect_p1 = $('#playerSelect1');
-  ui.overlay.playerSelect_p2 = $('#playerSelect2');
 
-  ui.overlay.playerSelect.css('display','block');
-  ui.overlay.playerSelect_p1.click(function(){
-    p1_ready = true;
-    if (p2_ready == true) {
-      // next step
-      gameController('players are ready');
-    } else {
-      ui.overlay.messageSystem('alert','WAITING FOR THE OTHER PLAYER!');
-    }
-  });
-  ui.overlay.playerSelect_p2.click(function(){
-    p2_ready = true;
-    if (p1_ready == true) {
-      // next step
-      gameController('players are ready');
-    } else {
-      ui.overlay.messageSystem('alert','WAITING FOR THE OTHER PLAYER!');
-    }
-  });
-}
 
 
 function displayInstructions(){
