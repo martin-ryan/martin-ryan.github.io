@@ -2,6 +2,7 @@
 // VARIABLES
 ui.overlay = {};
 ui.overlay.container = $('#overlayContainer');
+ui.overlay.overlay_message = $('#overlay_message');
 ui.overlay.alertBox = $('#messageAlert');
 ui.overlay.alertBkgd = $('#alertBkgd');
 ui.overlay.btn_yes = $('#btn_yes');
@@ -11,6 +12,7 @@ ui.overlay.messageSystem = function(typeOfMessage, message, needYesOrNo, callbac
   //
   var answer = undefined;
   ui.overlay.alertBkgd.css('display','block');
+  ui.overlay.overlay_message.css('display','block');
   // typeOfMessage: 'alert', ...
   switch (typeOfMessage) {
     case 'alert':
@@ -30,7 +32,7 @@ ui.overlay.messageSystem = function(typeOfMessage, message, needYesOrNo, callbac
       });
       ui.overlay.btn_no.click(function(){
         answer = false;
-        closeOverlay(1000,0);
+        closeMessage(200,0);
         //
       });
     }
@@ -51,6 +53,10 @@ function closeOverlay(duration, delay) {
   setTimeout(function(){ui.overlay.container.fadeOut(duration)},delay);
 }
 
+function closeMessage(duration, delay) {
+  setTimeout(function(){ui.overlay.overlay_message.fadeOut(duration)},delay);
+}
+
 function initPlayerSelect(){
   //
   ui.overlay.playerSelect = $('#overlay_playerSelect');
@@ -58,43 +64,56 @@ function initPlayerSelect(){
   ui.overlay.btn_playerReady2 = $('#btn_playerReady2');
   ui.overlay.playerSelect_p1 = $('#playerSelect1');
   ui.overlay.playerSelect_p2 = $('#playerSelect2');
-  ui.overlay.playerSelect.css('display','block');
+  ui.overlay.btn_play = $('#btn_play');
+  //
+  ui.overlay.playerSelect.css('display','block')
+  ui.overlay.btn_play.css('display','block');
+
 
   selectPlayer();
 }
 
 function selectPlayer(answer){
-  //
+
+  switch (answer) {
+    case 'true':
+    //
+    closeOverlay();
+    gameController('players are ready');
+      break;
+    case 'false':
+    //
+      break;
+    default:
+
+  }
   var p1_ready = false;
   var p2_ready = false;
   //
-  // Player vs Player or Player vs AI
-  //
-  // PLAYER ONE HIT READY
+  // PLAYER ONE READY
   ui.overlay.playerSelect_p1.click(function(){
     //
     p1_ready = true;
     ui.overlay.btn_playerReady1.css('background-color','green');
-    playAgainst();
   });
-  // PLAYER TWO HIT READY
+  //
+  // PLAYER TWO READY
   ui.overlay.playerSelect_p2.click(function(){
     //
     p2_ready = true;
     ui.overlay.btn_playerReady2.css('background-color','green');
-    playAgainst();
   });
-
-  playAgainst(){
+  //
+  // HIT PLAY
+  ui.overlay.btn_play.click(function(){
     //
-    if (p1_ready && p2_ready) {
+    if (p1_ready && p2_ready){
       //
-      playersSelectDone();
+      closeOverlay();
       gameController('players are ready');
     } else {
       //
       ui.overlay.messageSystem('alert','WAITING FOR THE OTHER PLAYER! DO YOU WANT TO PLAY AGAINST AI?', true, selectPlayer);
     }
-  }
-
+  });
 }

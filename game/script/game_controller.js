@@ -20,6 +20,10 @@ function gameController(state){
     //
     displayInstructions();
       break;
+    case 'one player is ready':
+    //
+    displayInstructions();
+      break;
     case 'instructions have been read':
     //
       break;

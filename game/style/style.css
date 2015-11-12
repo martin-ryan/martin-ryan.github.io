@@ -17,8 +17,16 @@ body {
   min-height: 577px;
   width: 1153.6px;
   height: 577px;
-  z-index: 1000;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.2); }
+
+#overlay_message {
+  display: none;
+  min-width: 1153.6px;
+  min-height: 577px;
+  width: 1153.6px;
+  height: 577px;
+  z-index: 200; }
 
 #messageAlert {
   text-align: center;
@@ -29,7 +37,7 @@ body {
   height: 114px;
   top: 231.5px;
   left: 302px;
-  z-index: 2001;
+  z-index: 203;
   background-color: rgba(57, 21, 21, 0.64);
   color: white; }
 
@@ -41,7 +49,29 @@ body {
   width: 1153.6px;
   height: 577px;
   background-color: rgba(0, 0, 0, 0.86);
-  z-index: 2000; }
+  z-index: 202; }
+
+#btn_yes {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: #9c0000;
+  z-index: 203; }
+
+#btn_no {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  left: 654px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: #9c0000;
+  z-index: 203; }
 
 #overlay_playerSelect {
   display: none;
@@ -81,26 +111,15 @@ body {
   top: 350px;
   background-color: #9c0000; }
 
-#btn_yes {
+#btn_play {
   font-size: 25px;
   display: none;
   position: absolute;
-  left: 300px;
+  left: 470px;
   width: 200px;
   height: 50px;
-  top: 350px;
+  top: 450px;
   background-color: #9c0000;
-  z-index: 2002; }
-
-#btn_no {
-  font-size: 25px;
-  display: none;
-  position: absolute;
-  left: 654px;
-  width: 200px;
-  height: 50px;
-  top: 350px;
-  background-color: #9c0000;
-  z-index: 2002; }
+  z-index: 200; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,17 @@
+// Z-INDEX RESERVED RANGES
+// 000-099 base images like board
+// 200-299-player select
+// 2000-2099 universal UI
+
+// 0 board
+// 10 overlay
+//
+//
 $minWidth_page: 1153.6px;
 $minHeight_page: 577px;
 $width_page: 1153.6px;
 $height_page: 577px;
+//
 //
 //
 body {
@@ -27,8 +37,17 @@ body {
   min-height: $minHeight_page;
   width: $width_page;
   height: $height_page;
-  z-index: 1000;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+#overlay_message {
+  display: none;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 200;
 }
 
 #messageAlert {
@@ -40,7 +59,7 @@ body {
   height: 114px;
   top: 231.5px;
   left: 302px;
-  z-index: 2001;
+  z-index: 203;
   background-color: rgba(57, 21, 21, 0.64);
   color: white;
 }
@@ -53,7 +72,30 @@ body {
   width: $width_page;
   height: $height_page;
   background-color: rgba(0, 0, 0, 0.86);
-  z-index: 2000;
+  z-index: 202;
+}
+#btn_yes {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 203;
+}
+
+#btn_no {
+  font-size:25px;
+  display: none;
+  position: absolute;
+  left: 654px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 203;
 }
 //
 //
@@ -65,6 +107,7 @@ body {
   height: $height_page;
 
 }
+
 .playerSelect {
   position: absolute;
   width: 443px;
@@ -101,26 +144,14 @@ body {
   background-color: rgb(156, 0, 0);
 }
 
-#btn_yes {
-  font-size: 25px;
-  display: none;
-  position: absolute;
-  left: 300px;
-  width: 200px;
-  height: 50px;
-  top: 350px;
-  background-color: rgb(156, 0, 0);
-  z-index: 2002;
-}
-
-#btn_no {
+#btn_play {
   font-size:25px;
   display: none;
   position: absolute;
-  left: 654px;
+  left: 470px;
   width: 200px;
   height: 50px;
-  top: 350px;
+  top: 450px;
   background-color: rgb(156, 0, 0);
-  z-index: 2002;
+  z-index: 200;
 }
