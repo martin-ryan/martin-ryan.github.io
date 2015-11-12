@@ -1,6 +1,126 @@
+$minWidth_page: 1153.6px;
+$minHeight_page: 577px;
+$width_page: 1153.6px;
+$height_page: 577px;
+//
+//
+body {
+  background-color: black;
+}
+
+#gameWrapper {
+  position: relative;
+}
+//
+// UI - UNIVERSAL COMPONENTS
 #board {
-  display: block;
-  width: 1153.6px;
-  height: 577px;
-  background-color: lightgrey;
+  position: absolute;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 0;
+}
+
+#overlayContainer {
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#messageAlert {
+  text-align: center;
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  width: 550px;
+  height: 114px;
+  top: 231.5px;
+  left: 302px;
+  z-index: 2001;
+  background-color: rgba(57, 21, 21, 0.64);
+  color: white;
+}
+
+#alertBkgd {
+  display: none;
+  position: absolute;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  background-color: rgba(0, 0, 0, 0.86);
+  z-index: 2000;
+}
+//
+//
+#overlay_playerSelect {
+  display: none;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+
+}
+.playerSelect {
+  position: absolute;
+  width: 443px;
+  height: 282px;
+  top: 147px;
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 62, 64, 0.51);
+}
+
+#playerSelect1 {
+  left: 100px;
+}
+
+#playerSelect2 {
+  left: 604px;
+}
+
+#btn_playerReady1 {
+  position: absolute;
+  left: 100px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+}
+
+#btn_playerReady2 {
+  position: absolute;
+  left: 604px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+}
+
+#btn_yes {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 2002;
+}
+
+#btn_no {
+  font-size:25px;
+  display: none;
+  position: absolute;
+  left: 654px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 2002;
 }
