@@ -26,14 +26,17 @@ function gameController(state){
       break;
     case 'instructions have been read':
     //
+    deployUnits();
       break;
-    case 'first player has deployed':
+    case 'units deployed':
     //
+    showAndActivateGameUI();
       break;
-    case 'second player has deployed':
+    case 'select unit for card':
     //
+    useCard();
       break;
-    case 'game is ready to play':
+    case '':
     //
       break;
     //

@@ -122,4 +122,70 @@ body {
   background-color: #9c0000;
   z-index: 200; }
 
+#overlay_instructions {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 1153.6px;
+  min-height: 577px;
+  width: 1153.6px;
+  height: 577px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  z-index: 300; }
+
+#overlay_instructions h1 {
+  font-size: 50px; }
+
+#overlay_instructions p {
+  font-size: 30px; }
+
+#actionsDeck {
+  position: absolute;
+  font-size: 25px;
+  width: 250px;
+  height: 400px;
+  top: 600px;
+  left: 50px;
+  background-color: #282828;
+  color: white;
+  z-index: 2010; }
+
+.actionCard {
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  width: 100px;
+  height: 200px;
+  margin: 20px;
+  top: 10px;
+  left: 10px;
+  background-color: #636161;
+  color: transparent; }
+
+#currentHand {
+  position: absolute;
+  font-size: 25px;
+  width: 750px;
+  height: 400px;
+  top: 600px;
+  left: 350px;
+  background-color: #282828;
+  color: white;
+  float: left;
+  z-index: 2010; }
+
+#currentHand h1 {
+  color: white;
+  z-index: 2011; }
+
+.stats {
+  display: block;
+  position: relative;
+  width: 125px;
+  height: 50px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3); }
+
 /*# sourceMappingURL=style.css.map */
